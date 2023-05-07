@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Resident Connect</title>
+
+        <link rel="stylesheet" href="AddStudent.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img id="BackGround" src="COSC457Bground.jpg">
+        <h1 id="titleTowson">Resident Connect</h1>
+
+
+        <script>
+            function addWorker() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        alert(this.responseText);
+                    }
+                };
+                xhttp.open("POST", "addMaintenanceWorker.php", true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                var fname = document.getElementById("fname").value;
+                var lname = document.getElementById("lname").value;
+                var work_ID = document.getElementById("work_ID").value;
+                var resAddress = document.getElementById("resAddress").value;
+                xhttp.send("fname=" + fname + "&lname=" + lname + "&work_ID=" + work_ID + "&resAddress=" + resAddress);
+            }
+        </script>
+        
+
+            <!--Maintenance Worker-->
+            <div class="mainWorker">
+                <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required><br><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" required><br><br>
+            <label for="work_ID">Work ID:</label>
+            <input type="text" id="work_ID" name="work_ID" placeholder="Work ID"><br><br>
+            <label for="resAddress">Residence Address:</label>
+            <input type="text" id="resAddress" name="resAddress" placeholder="Residence Address" required><br><br>
+         </div>
+        
+         <div class="mainWorker">
+            <a href="Resident.html"><button id="button" onclick="addWorker()"> Add Maintenance Worker</button></a>
+        </div>
+
+    </body>
+</html>

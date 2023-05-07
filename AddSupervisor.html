@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Resident Connect</title>
+
+        <link rel="stylesheet" href="AddStudent.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img id="BackGround" src="COSC457Bground.jpg">
+        <h1 id="titleTowson">Resident Connect</h1>
+
+<script>
+      function AddSupervisor() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // display the data in the table
+      var table = document.getElementById("Supervisor");
+      var row = table.insertRow(1);
+      var fnameCell = row.insertCell(0);
+      var lnameCell = row.insertCell(1);
+      var ssnCell = row.insertCell(2);
+      fnameCell.innerHTML = document.getElementById("fname").value;
+      lnameCell.innerHTML = document.getElementById("lname").value;
+      ssnCell.innerHTML = document.getElementById("superSSN").value;
+    }
+  };
+  xhttp.open("POST", "AddSupervisor.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  var fname = document.getElementById("fname").value;
+  var lname = document.getElementById("lname").value;
+  var superSSN = document.getElementById("superSSN").value;
+  console.log("First name:", fname);
+  console.log("Last name:", lname);
+  console.log("Supervisor SSN:", superSSN);
+  xhttp.send("fname=" + fname + "&lname=" + lname + "&superSSN=" + superSSN );
+}
+          </script>
+
+    <!--Supervisor-->
+    <div class="supervisor">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name"required><br><br>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" required><br><br>
+
+            <label for="superSSN">Supervisor SSN:</label>
+            <input type="text" id="superSSN" name="superSSN" placeholder="SSN" required><br><br>
+    </div>
+
+    <div class="supervisor">
+        <a href="Resident.html"><button id="button" onclick="AddSupervisor"> Add Supervisor </button></a>
+    </div>
+
+        
+    </body>
+        
+</html>

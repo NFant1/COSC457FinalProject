@@ -29,6 +29,71 @@
                 cell6.innerHTML = "";
                 cell7.innerHTML = "";
                 cell8.innerHTML = "";
+
+
+                var Residence = document.getElementById("resInfo");
+                var row = Residence.insertRow(0);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                
+
+                cell1.innerHTML = "";
+                cell2.innerHTML = "";
+                cell3.innerHTML = "";
+                cell4.innerHTML = "";
+                cell5.innerHTML = "";
+            
+
+                var ResidenceLifeCordinator = document.getElementById("ResidenceLifeCordinator");
+                var row = ResidenceLifeCordinator.insertRow(0);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                
+
+                cell1.innerHTML = "";
+                cell2.innerHTML = "";
+                cell3.innerHTML = "";
+                cell4.innerHTML = "";
+                cell5.innerHTML = "";
+
+
+                var mainWorker = document.getElementById("mainWorker");
+                var row = mainWorker.insertRow(0);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                
+                
+
+                cell1.innerHTML = "";
+                cell2.innerHTML = "";
+                cell3.innerHTML = "";
+                cell4.innerHTML = "";
+                
+
+
+                
+                var Supervisor = document.getElementById("Supervisor");
+                var row = Supervisor.insertRow(0);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                
+                
+                
+
+                cell1.innerHTML = "";
+                cell2.innerHTML = "";
+                cell3.innerHTML = "";
+                
+
             }
         </script>
     </head>
@@ -36,6 +101,7 @@
         <img id="BackGround" src="COSC457Bground.jpg">
 
         <h1 id="isResident">Resident Connect</h1>
+ 
 
         <!--Lists all the students added to the database-->
         <table id="student">
@@ -51,8 +117,62 @@
             </tr>    
         </table>
 
-        <div class="addStudent">
+            
+        <!--Lists all the Residences added to the database-->
+        <table id="resInfo">
+            <tr>
+        <th>Residence_name</th>
+        <th>Room Number</th>
+        <th>Bed Space</th>
+        <th>Floor</th>
+        <th>Key Number</th>
+            </tr>    
+        </table>
+
+
+
+        <!--Lists all the RLC added to the database-->
+        <table id="ResidenceLifeCordinator">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Employee ID</th>
+                <th>Manager SSN</th>
+                <th>Resident Address</th>
+            </tr>    
+        </table>
+
+
+ <!--Lists all the Maintenance Workers added to the database-->
+        <table id="mainWorker">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Work ID</th>
+                <th>Residence Address</th>
+            </tr>    
+        </table>
+
+
+
+        <!--Lists all the Supervisors added to the database-->
+        <table id="Supervisor">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Supervisor SSN</th>
+            </tr>    
+        </table>
+
+
+
+
+        <div class="addQueries">
            <a href="AddStudent.html"><button id="button">Add Student</button></a>
+           <a href="AddResidenceLifeCordinator.html"><button id="button">Add Residence Life Coordinator</button></a>
+           <a href="AddResidence.html"><button id="button">Add Residence</button></a>
+           <a href="AddSupervisor.html"><button id="button">Add Supervisor</button></a>
+           <a href="AddMaintenanceWorkers.html"><button id="button">Add Maintenance Workers</button></a>
         </div>
     </body>
 </html>

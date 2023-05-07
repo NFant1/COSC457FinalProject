@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Resident Connect</title>
+
+        <link rel="stylesheet" href="AddStudent.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img id="BackGround" src="COSC457Bground.jpg">
+        <h1 id="titleTowson">Resident Connect</h1>
+
+
+     
+        <script>
+            function AddResidence() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        alert(this.responseText);
+                    }
+                };
+                xhttp.open("POST", "AddResidence.php", true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                var Residence_name = document.getElementById("Residence_name").value;
+                var room_num = document.getElementById("room_num").value;
+                var bed_space = document.getElementById("bed_space").value;
+                var floor = document.getElementById("floor").value;
+                var key_num = document.getElementById("key_num").value;
+                xhttp.send("Residence_name=" + Residence_name + "&room_num=" + room_num + "&bed_space=" + bed_space + "&floor=" + floor + "&key_num=" + key_num
+                );
+            }
+        </script>
+
+
+         
+     <!--Residence-->
+         <div class="resInfo">
+            <h2>Residence Information</h2>
+            <label for= "Residence_name">Residence_name</label>
+            <input type="text" id="Residence_name" name="Residence_name" placeholder="Residence name" required>
+
+            <label for="room_num">Room Number:</label>
+            <input type="text" id="room_num" name="room_num" placeholder="Room number" required><br><br>
+
+            <label for="bed_space">Bed Space:</label>
+            <input type="text" id="bed_space" name="bed_space" placeholder="Bed Space" required><br><br>\
+
+            <label for="floor">Floor:</label>
+            <input type="text" id="floor" name="floor" placeholder= "Floor" required><br><br>
+
+            <label for="key_num">Key Number:</label>
+            <input type="text" id="key_num" name="key_num" placeholder="Key number" required><br><br>
+        </div>
+
+        <div class="resInfo">
+            <a href="Resident.html"><button id="button" onclick="AddResidence">Add Residence </button></a>
+        </div>
+
+
+    </body>
+    
+</html>

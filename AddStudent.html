@@ -10,76 +10,49 @@
     <body>
         <img id="BackGround" src="COSC457Bground.jpg">
         <h1 id="titleTowson">Resident Connect</h1>
-
+        
+        <script type="text/javascript" src="AddStudent.js"></script>
+        
+        
         <!--Admin inputs required information for student added-->
         <div class="mainInfo">
             <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="fname" required><br><br>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required><br><br>
             <label for="lname">Last Name:</label>
-            <input type="text" id="lname" name="lname" required><br><br>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" required><br><br>
             <label for="ssn">Social Security Number:</label>
-            <input type="text" id="ssn" name="ssn" required><br><br>
+            <input type="text" id="ssn" name="ssn" placeholder="SSN" required><br><br>
             <label for="Address">Address:</label>
-            <input type="text" id="address" name="address" required><br><br>
+            <input type="text" id="address" name="address" placeholder="Address" required><br><br>
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob" name="dob" required><br><br>
             <label for="stud_id">Student ID:</label>
-            <input type="text" id="stud_id" name="stud_id" required><br><br>
+            <input type="text" id="stud_id" name="stud_id" placeholder="Student ID" required><br><br>
             <label for="resAddress">Residence Address:</label>
-            <input type="text" id="resAddress" name="resAddress" required><br><br>
+            <input type="text" id="resAddress" name="resAddress" placeholder="Residence Address" required><br><br>
         </div>
 
         <!--Undergraduate-->
         <div class="underGrad">
             <label for="level">Level:</label>
-            <input type="text" id="level" name="level"><br><br>
+            <input type="text" id="level" name="level" placeholder="level"><br><br>
         </div>
 
         <!--Graduate-->
         <div class="Grad">
             <label for="degree">Degree Earned:</label>
-            <input type="text" id="degree" name="degree"><br><br>
-        </div>
-
-        <div class="resInfo">
-            <label for="room_num">Room Number:</label>
-            <input type="text" id="room_num" name="room_num" required><br><br>
-            <label for="bed_space">Bed Space:</label>
-            <input type="text" id="bed_space" name="bed_space" required><br><br>
-            <label for="floor">Floor:</label>
-            <input type="text" id="floor" name="floor" required><br><br>
-            <label for="key_num">Key Number:</label>
-            <input type="text" id="key_num" name="key_num" required><br><br>
+            <input type="text" id="degree" name="degree" placeholder="Degree Earned"><br><br>
         </div>
 
         <!--Student Employee-->
         <div class="employee">
             <label for="workAdd">Work Address:</label>
-            <input type="text" id="workAdd" name="workAdd" ><br><br>
+            <input type="text" id="workAdd" name="workAdd" placeholder="Work Address" ><br><br>
         </div>
 
-        <!--Residence Life Coordinator-->
-        <div class="resCord">
-            <label for="emp_ID">Employee ID:</label>
-            <input type="text" id="emp_ID" name="emp_ID" ><br><br>
-            <label for="mgr_ssn">Manager SSN:</label>
-            <input type="text" id="mgr_ssn" name="mgr_ssn" ><br><br>
-        </div>
-
-        <!--Maintenance Worker-->
-        <div class="mainWorker">
-            <label for="work_ID">Work ID:</label>
-            <input type="text" id="work_ID" name="work_ID" ><br><br>
-        </div>
-
-        <!--Supervisor-->
-        <div class="supervisor">
-            <label for="superSSN">Supervisor SSN:</label>
-            <input type="text" id="superSSN" name="superSSN"><br><br>
-        </div>
 
         <div class="addStu">
-            <button id="button">Add Student</button>
+            <a href="Resident.html"><button id="button">Add Student</button></a>
         </div>
     </body>
 </html>
