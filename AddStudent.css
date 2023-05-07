@@ -14,11 +14,7 @@
     font-family: 'Black Han Sans', sans-serif;
 }
 
-#adminTitle{
-    font-family: 'Black Han Sans', sans-serif;
-}
-
-.Information{
+.mainInfo, .underGrad, .Grad, .resInfo, .employee, .resCord, .mainWorker, .supervisor{
     position: relative;
     top: 150px;
     text-align: center;
@@ -26,7 +22,7 @@
     font-size: 20px;
 }
 
-.login{
+.addStu{
     padding: 15px 32px;
     position: relative;
     top: 150px;
@@ -37,6 +33,3 @@
     
 }
 
-a{
-    text-decoration: none;
-}

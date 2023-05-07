@@ -14,16 +14,25 @@
     font-family: 'Black Han Sans', sans-serif;
 }
 
-
-.Info{
+table{
     position: relative;
     top: 150px;
-    text-align: center;
-    text-decoration-style: bold;
+    left: 100px;
     font-size: 20px;
+    border: 1px solid black;
 }
 
-.submit{
+td, th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.addStudent{
     padding: 15px 32px;
     position: relative;
     top: 150px;

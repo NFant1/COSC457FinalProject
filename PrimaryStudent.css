@@ -5,7 +5,7 @@
     opacity: 70%;
 }
 
-#titleTowson{
+h1{
     position: relative;
     text-align: center;
     top: 70px;
@@ -14,19 +14,7 @@
     font-family: 'Black Han Sans', sans-serif;
 }
 
-#adminTitle{
-    font-family: 'Black Han Sans', sans-serif;
-}
-
-.Information{
-    position: relative;
-    top: 150px;
-    text-align: center;
-    text-decoration-style: bold;
-    font-size: 20px;
-}
-
-.login{
+.deleteStudent{
     padding: 15px 32px;
     position: relative;
     top: 150px;
@@ -34,9 +22,5 @@
     text-align: center;
     margin: 4px 2px;
     font-size: 16px;
-    
-}
-
-a{
     text-decoration: none;
 }
