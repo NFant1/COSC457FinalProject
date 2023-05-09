@@ -1,7 +1,9 @@
 const mysql = require('mysql');
+const express = require('express');
+const bodyParser = require('body-parser');
 
 const connection = mysql.createConnection({
-  server: 'jdbc:mysql://localhost:3306/projectdb?useSSL=false',
+  server: 'localhost',
   host: '127.0.0.1',
   user: 'root',
   password: 'Chel@24sea99',
@@ -37,7 +39,7 @@ connection.connect((err) => {
   app.put('/Student/:id', (req, res) => {
     const { F_NAME, L_NAME, SSN, ADDRESS, DOB, STUDENT_ID, RESIDENCE_ADDR } = req.body;
     const { id } = req.params;
-    const sql = 'UPDATE students SET fname = ?, lname = ?, ssn = ?, address = ?, dob = ?, stud_id = ?, resAddress = ? WHERE id = ?';
+    const sql = 'UPDATE Student SET fname = ?, lname = ?, ssn = ?, address = ?, dob = ?, stud_id = ?, resAddress = ? WHERE id = ?';
     connection.query(sql, [F_NAME, L_NAME, SSN, ADDRESS, DOB, STUDENT_ID, RESIDENCE_ADDR], (err, result) => {
       if (err) throw err;
       res.json({ message: 'Student updated successfully' });
@@ -47,7 +49,7 @@ connection.connect((err) => {
   // handle DELETE request to remove data from the database
   app.delete('/Student/:STUDENT_ID', (req, res) => {
     const { id } = req.params;
-    const sql = 'DELETE FROM students WHERE STUDENT_ID = ?';
+    const sql = 'DELETE FROM Student WHERE STUDENT_ID = ?';
     connection.query(sql, [id], (err, result) => {
       if (err) throw err;
       res.json({ message: 'Student deleted successfully' });

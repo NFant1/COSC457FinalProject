@@ -1,5 +1,5 @@
 <?php
-    $servername = "jdbc:mysql://localhost:3306/projectdb?useSSL=false";
+    $servername = "localhost";
     $username = "root";
     $password = "Chel@24sea99";
     $dbname = "projectdb";
